@@ -24,9 +24,14 @@ console.log(Aluno);
 
 Aluno.prototype.getCurso = function () {
     return this.curso;
+    // return "Engenharia Ambiental";
   }
 
-console.log(Aluno.getCurso());
+console.log(new Aluno().getCurso);
+
+// let alunoNew = new Aluno.getCurso();
+
+// console.log(alunoNew);
 
 // var alunoNew = new Aluno("Engenharia Ambiental");
 
