@@ -6,12 +6,14 @@ const pessoa = {
   nome: "Jaque",
   idade: 28,
   cumprimentaPessoa(nome = "") {
-    return ("Seja bem vindo: " + nome);
+    return ("Seja bem vindo(a): " + nome);
   },
 };
 
-const mensagem = pessoa.cumprimentaPessoa("Joao");
+const mensagem = pessoa.cumprimentaPessoa("João");
 console.log(mensagem);
+
+console.log(pessoa.cumprimentaPessoa("Gabi"));
 
 
 /*
@@ -64,7 +66,7 @@ console.log(counter.count)
 console.log(this == window); // retorna true 
 
 // Se você atribuir uma propriedade ao objeto this no contexto global,
-// o JavaScripti adicionará a propriedade como sendo uma propriedade do 
+// o JavaScript adicionará a propriedade como sendo uma propriedade do 
 // objeto global, conforme o exemplo a seguir:
 
 
