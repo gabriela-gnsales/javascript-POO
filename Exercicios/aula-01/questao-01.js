@@ -10,25 +10,22 @@ Retorne o objeto aluno ANTES da chamada da função (NÃO ENTENDI ESSA PARTE)
 Retorne o objeto aluno APÓS a chamada da função 
 */
 
+document.write("QUESTÃO 1 <br><br>");
+
 const aluno = {
     nome: "Gabi",
     matricula: 1,
     idade: 27,
-    // console.log(this.aluno);
-    // curso: function("Programação Orientada a Objetos I - JavaScript") {
-    //     return this.curso;
-    // },
     cursoAluno(curso = "Programação Orientada a Objetos I - JavaScript") {
       return (curso);
-    },
+    }
   };
 
-  
   console.log(aluno);
 
   console.log(
     "Nome:", aluno.nome, "Matrícula:", aluno.matricula, "Idade:", aluno.idade, "Curso:", aluno.cursoAluno()
-    )
+    );
 
   document.write(
     `Nome: ${aluno.nome} <br>
