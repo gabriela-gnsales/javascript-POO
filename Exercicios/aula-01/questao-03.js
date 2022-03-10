@@ -12,28 +12,38 @@ Invoque a função e printe o resultado.
 
 document.write("<br><br> QUESTÃO 3 <br><br>");
 
+// criar função construtora
 function Aluno(nome, idade, email, matricula, curso) {
-    this.nome = nome;
-    this.idade = idade;
-    this.email = email;
-    this.matricula = matricula;
-    this.curso = curso;
-  }
+    this.nome = nome,
+    this.idade = idade,
+    this.email = email,
+    this.matricula = matricula,
+    this.curso = curso
+  };
 
-console.log(Aluno);
+// instanciar o Aluno
+const alunoNew = new Aluno(
+    "Gabriela",
+    27,
+    "gabriela.gnsales@gmail.com",
+    123456,
+    "Engenharia Ambiental"
+);
 
-Aluno.prototype.getCurso = function () {
+// printar o resultado
+console.log(alunoNew);
+
+// prototype (um protótipo da função)
+Aluno.prototype.getCurso = function() {
     return this.curso;
-    // return "Engenharia Ambiental";
-  }
+}
 
-console.log(new Aluno().getCurso);
+console.log(alunoNew.getCurso());
 
-// let alunoNew = new Aluno.getCurso();
+document.write(
+    `Nome: ${alunoNew.nome} <br>
+    Matrícula: ${alunoNew.matricula} <br>
+    Idade: ${alunoNew.idade} <br>
+    Curso: ${alunoNew.getCurso()}`
+    );
 
-// console.log(alunoNew);
-
-// var alunoNew = new Aluno("Engenharia Ambiental");
-
-// console.log(alunoNew);
-// console.log(alunoNew.getCurso("Química"));
