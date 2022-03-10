@@ -27,7 +27,9 @@ class pinguim extends ave {
 
 let b = new passaro("azul", "arara", true);
 console.log(b);
-let g = new pinguim() //PEGAR RESTANTE DO CÓDIGO NO GITHUB DA PROF
+
+let g = new pinguin("preto", "seila", false);
+console.log(g);
 
 // Usando o extends para um objeto pré construido
 
@@ -43,6 +45,6 @@ class DataModificada extends Date {
 
 let d = new DataModificada();
 let f = new Date();
+
+console.log(d.getDay());
 console.log(d.getFormatteDate());
-
-
