@@ -24,51 +24,31 @@ let curso = {
     },
     set p1(idP1) {
         this._p1 = idP1;
-        console.log(idP1);
+        console.log("p1: ", this._p1, typeof this._p1);
     },
     get p2() {
         return this._p2;
     },
     set p2(idP2) {
         this._p2 = idP2;
+        console.log("p2: ", this._p2, typeof this._p2);
     },
     get calculaMedia() {
-        if(this._p1 <= 0) {
+        if(this._p1 == 0) {
             return this._media = `A nota da p1 foi 0, não vai ser possível fazer uma média`;
         } else{
             return this._media = (this._p1 + this._p2) / 2;
         }
     },
-    // set media(idMedia) {
-    //     this._media = idMedia;
-    // },
     get mensagem() {
-        console.log(this._media);
-        // return "Cor do carro: " + this._cor + " | Marca do carro: " + this._marca;
-        return `O nome do curso é ${this._nome} e sua média é igual a ${this._media}.`
+        console.log("média: ", this.calculaMedia, typeof this.calculaMedia);
+        return `O nome do curso é ${this._nome} e sua média é igual a ${this.calculaMedia}.`
     }
-    
 };
 
 curso.nome = "POO";
-curso.p1 = 0;
-curso.p2 = 5.0;
-
-// set media(media) {
-//     if(this.p1 <= 0) {
-//         return  "A nota da p1 foi 0, não vai ser possível fazer uma média";
-//         console.log('Pium');
-//     }
-//     else {
-//         media = (this.p1 + this.p2)/2;
-//         return this.nome + "\nMédia: " + media;
-//     }
-// }
-
-// console.log(curso._p1);
-
-// console.log(curso.calculaMedia());
+curso.p1 = 6.0;
+curso.p2 = 8.0;
 
 console.log(curso.mensagem);
-
-console.log(curso._media);
+console.log(curso);

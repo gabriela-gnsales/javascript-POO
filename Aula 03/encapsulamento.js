@@ -158,7 +158,7 @@ const churrascaria = new Restaurante('João e Maria','SP', true, 2);
 
 // ---- //
 
-// trasnformar tempoEntregaEstimado como privado
+// transformar tempoEntregaEstimado como privado
 
 class RestaurantePrivado {
     #tempoEntregaEstimado;
