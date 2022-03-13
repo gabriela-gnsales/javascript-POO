@@ -25,7 +25,6 @@ const cnh1 = new CNH('BR');
 console.log(cnh1.idade());
 console.log(cnh1.mensagem());
 
-
 const cnh2 = new CNH('US');
 console.log(cnh2.idade());
 console.log(cnh2.mensagem());
