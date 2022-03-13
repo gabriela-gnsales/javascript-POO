@@ -7,6 +7,7 @@ Refaça o exercício da TV utilizando a sintaxe de classe (class).
 */
 
 // Função construtora
+
 function TVconstrutor(canal, volume, ligada) {
     this.canal = canal,
     this.volume = volume,
@@ -94,4 +95,3 @@ console.log('Desliga:', TVclass1.desliga());
 console.log('Canal:', TVclass1.mudaDeCanal());
 console.log('Volume:', TVclass1.aumentaVolume());
 console.log('Volume:', TVclass1.diminuiVolume());
-
