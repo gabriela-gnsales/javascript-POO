@@ -3,45 +3,45 @@
 */
 
 const TV = {
-    _canal: '',
-    _volume: '',
-    _ligada: false,
+    canal: '',
+    volume: '',
+    ligada: false,
     liga() {
-        if(!this._ligada) {
-            this._ligada = true;
+        if(!this.ligada) {
+            this.ligada = true;
         }
-        return this._ligada;
+        return this.ligada;
     },
     desliga() {
-        if(this._ligada) {    
-          this._ligada = false;
+        if(this.ligada) {    
+          this.ligada = false;
         }
-        return this._ligada;
+        return this.ligada;
     },
     mudaDeCanal () {
-        return this._canal;
+        return this.canal;
     },
     aumentaVolume(volumeInicial = 10, volumeFinal) {
-        if(this._volume > 0) {
-           volumeFinal = volumeInicial + this._volume;
+        if(this.volume > 0) {
+           volumeFinal = volumeInicial + this.volume;
         }
         return volumeFinal;
     },
     diminuiVolume(volumeInicial = 10, volumeFinal) {
-        if(this._volume < 0) {
-            volumeFinal = volumeInicial + this._volume;
+        if(this.volume < 0) {
+            volumeFinal = volumeInicial + this.volume;
         }
         return volumeFinal;
     }
 };
 
-TV._canal = 4;
-TV._volume = 5;
-TV._ligada = true;
+TV.canal = 4;
+TV.volume = 5;
+TV.ligada = true;
 
 console.log(TV);
 console.log('Liga:', TV.liga());
-console.log('Desliga:',TV.desliga());
-console.log('Canal:',TV.mudaDeCanal());
-console.log('Volume:',TV.aumentaVolume());
-console.log('Volume:',TV.diminuiVolume());
+console.log('Desliga:', TV.desliga());
+console.log('Canal:', TV.mudaDeCanal());
+console.log('Volume:', TV.aumentaVolume());
+console.log('Volume:', TV.diminuiVolume());
