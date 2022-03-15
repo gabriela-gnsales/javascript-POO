@@ -14,14 +14,14 @@
 // Bank
  
 class Bank {
-    constructor(name, account, balance, passcode) {
-        this.name = name;
-        this.account = account;
-        this.balance = balance;
-        this.type = type;
-        this.passcode = passcode;
-        this.logui = [];
-        this.limite = 5000
+    constructor(name, account, balance, passcode, limite) {
+        this.name = name,
+        this.account = account,
+        this.balance = balance,
+        // this.type = type;
+        this.passcode = passcode,
+        this.logui = [],
+        this.limite = limite
     }
     get Balance() {
         if (this.passcode = 'passcode'){
@@ -33,30 +33,28 @@ class Bank {
     get Name() {
         return this.name;
     }
-    get Type() {
-        return this.type;
+    // get Type() {
+    //     return this.type;
+    // }
+    set Cpf(c) {
+        this.cpf = c;
     }
-
-   set Cpf(c) {
-       this.cpf = c;
-   }
-   get Cpf() {
-       return this.cpf;
-   }
-   
+    get Cpf() {
+        return this.cpf;
+    }
     saque = (valor) => {
         
         if (valor <= this.balance){
             this.balance -= valor;
             this.logui.push(-valor);
-            return "Valor retirado: -" + valor;
+            return "Valor retirado: R$ -" + valor;
         }else{
             return "Valor indisponível";
         }
     }
     deposito = (valor) => {
         this.balance += valor;
-        return "valor adicionado com sucesso: +" + valor;
+        return "valor adicionado com sucesso: R$ +" + valor;
     }
     extrato = () => {
         for(var i = 0;i < this.logui.length();i++) {
@@ -67,13 +65,12 @@ class Bank {
         if(valor <= this.limite) {
             this.limite -= valor;
             this.balance = this.balance - valor;
-            return "Emprestimo de " + valor + ' realizado.';
+            return "Empréstimo de R$ " + valor + ' realizado.';
         }else{
-            return 'Emprestimo indisponível';
+            return 'Empréstimo indisponível';
         }
     }
 }
-
 
 class PJ extends Bank{
     constructor(name, account, balance, passcode, cnpj, limite = 20000) {
@@ -85,22 +82,16 @@ class PJ extends Bank{
 
 class PF extends Bank{
     constructor(nome, account, balance, passcode,cpf, limite = 10000) {
-        super(nome, account, balance, passcode, limite)
+        super(nome, account, balance, passcode, limite),
         this.cpf = cpf
     }
 }
 
-// Saldo = () => {
-//     let saldoTotal = this.saldo + this.entrada - this.saida;
-//     return `Saldo: ${saldoTotal}`;
-// }
+const joao = new PF('João', 0000, 2000, 'passcode', 01010101);
+console.log(joao); // PF {name: 'João', saque: ƒ, deposito: ƒ, extrato: ƒ, emprestimo: ƒ, …}
+console.log(joao.saque(300)); // Valor retirado: R$ -300
+console.log(joao.extrato);
+console.log(joao.saque(3000)); // Valor indisponível
+console.log(joao.emprestimo(4000)); // Empréstimo de R$ 2700 realizado.
+console.log(joao.saque(3000)); // Valor indisponível
 
-// Saque = (valorSacar, senhaSacar) => {
-//     if(valorSacar <= saldoTotal) {
-//         if(senhaSacar === senha) {
-//             let saldoFinal = saldoTotal - valorSacar;
-//             return `Você sacou R$ ${valorSacar} e seu saldo agora é R$ ${saldoFinal}.`
-//         }
-        
-//     }
-// }

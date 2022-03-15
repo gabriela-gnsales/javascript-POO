@@ -36,3 +36,18 @@ console.log(joao);
 
 const jaque = new Cidadao('Carlos', 24, '0000', '11111');
 console.log(jaque);
+
+// Saldo = () => {
+//     let saldoTotal = this.saldo + this.entrada - this.saida;
+//     return `Saldo: ${saldoTotal}`;
+// }
+
+// Saque = (valorSacar, senhaSacar) => {
+//     if(valorSacar <= saldoTotal) {
+//         if(senhaSacar === senha) {
+//             let saldoFinal = saldoTotal - valorSacar;
+//             return `Você sacou R$ ${valorSacar} e seu saldo agora é R$ ${saldoFinal}.`
+//         }
+        
+//     }
+// }
